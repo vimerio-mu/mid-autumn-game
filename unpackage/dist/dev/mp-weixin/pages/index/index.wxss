@@ -1,0 +1,45 @@
+
+.indexBg {
+	overflow: hidden;
+	width: 750rpx;
+	background-color: #eeeeee;
+}
+.inditifyBtn {
+	border-radius: 25%;
+	width: 500rpx;
+	height: 100rpx;
+	background-color: dimgray;
+	position: absolute;
+	bottom: 100rpx;
+	right: 125rpx;
+}
+.rulesBtn {
+	border-radius: 25%;
+	width: 200rpx;
+	height: 100rpx;
+	background-color: dimgray;
+	position: absolute;
+	top: 100rpx;
+	right: 30rpx;
+}
+.inditifyIfoBtn {
+	border-radius: 25%;
+	width: 200rpx;
+	height: 100rpx;
+	background-color: dimgray;
+	position: absolute;
+	top: 210rpx;
+	right: 30rpx;
+}
+.popup {
+	border: 1px solid red;
+	background-color: #eeeeee;
+	height: 200rpx;
+	width: 500rpx;
+}
+.demo {
+	height: 200rpx;
+	background-color: grey;
+	border-bottom: 5px solid red;
+}
+

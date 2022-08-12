@@ -1,0 +1,1 @@
+<view class="container data-v-6b9933c4"><image class="image data-v-6b9933c4" src="{{src}}"></image><view class="textContainer data-v-6b9933c4"><text class="text data-v-6b9933c4">{{info}}</text></view></view>

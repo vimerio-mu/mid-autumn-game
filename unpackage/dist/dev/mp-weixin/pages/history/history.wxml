@@ -1,0 +1,1 @@
+<view><image class="banner" src="../../static/bg.jpeg" mode></image><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view><view class="row"><text>{{item.name}}</text><text>{{item.state===1?'进行中':'已完成'}}</text></view></view></block><button type="default" data-event-opts="{{[['tap',[['back',['$event']]]]]}}" bindtap="__e">返回</button></view>

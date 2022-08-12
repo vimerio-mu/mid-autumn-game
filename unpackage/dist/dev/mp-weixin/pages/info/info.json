@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "身份介绍",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "identify-info": "/components/IdentifyInfo/IdentifyInfo"
+  }
+}

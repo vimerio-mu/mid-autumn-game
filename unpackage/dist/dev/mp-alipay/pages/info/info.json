@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "身份介绍",
+  "pullRefresh": false,
+  "usingComponents": {
+    "identify-info": "/components/IdentifyInfo/IdentifyInfo"
+  }
+}

@@ -1,0 +1,21 @@
+
+.container.data-v-6b9933c4 {
+	padding: 10rpx;
+	background-color: blue;
+	margin-bottom: 10rpx;
+}
+.image.data-v-6b9933c4 {
+	width: 700rpx;
+	background-color: white;
+}
+.textContainer.data-v-6b9933c4 {
+	align-content: center;
+	padding: 10rpx;
+	background-color: black;
+}
+.text.data-v-6b9933c4 {
+	color: red;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
