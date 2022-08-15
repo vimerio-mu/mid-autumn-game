@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "造月计划",
+  "pullRefresh": false,
+  "usingComponents": {
+    "diary-info": "/components/DiaryInfo/DiaryInfo",
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup"
+  }
+}

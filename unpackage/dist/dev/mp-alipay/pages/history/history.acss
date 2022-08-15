@@ -1,0 +1,12 @@
+
+.banner {
+	margin: 25rpx;
+	width: 700rpx;
+}
+.row {
+	margin: 25rpx;
+	width: 700rpx;
+	height: 50rpx;
+	background-color: #eee;
+}
+

@@ -10,7 +10,7 @@
             "path" : "pages/info/info",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "身份介绍",
+                "navigationBarTitleText": "造月计划",
                 "enablePullDownRefresh": false
             }
             
@@ -19,7 +19,7 @@
             "path" : "pages/card/card",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "身份",
+                "navigationBarTitleText": "造月计划",
                 "enablePullDownRefresh": false
             }
             
@@ -28,7 +28,7 @@
             "path" : "pages/history/history",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "造月历史",
+                "navigationBarTitleText": "造月计划",
                 "enablePullDownRefresh": false
             }
             
@@ -37,15 +37,15 @@
             "path" : "pages/createTeam/createTeam",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "创建队伍",
+                "navigationBarTitleText": "造月计划",
                 "enablePullDownRefresh": false
             }
             
         },{
-            "path" : "pages/diary/diary",
+            "path" : "pages/leaderDiary/leaderDiary",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "写日志",
+                "navigationBarTitleText": "造月计划",
                 "enablePullDownRefresh": false
             }
             
@@ -53,7 +53,7 @@
             "path" : "pages/submit/submit",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "全队情况",
+                "navigationBarTitleText": "造月计划",
                 "enablePullDownRefresh": false
             }
             
@@ -62,7 +62,33 @@
             "path" : "pages/share/share",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "造月计划",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/joinTeam/joinTeam",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "造月计划",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/memberDiary/memberDiary",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "造月计划",
+                "enablePullDownRefresh": false
+            }
+            
+        },{
+            "path" : "pages/memberCheck/memberCheck",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "造月计划",
                 "enablePullDownRefresh": false
             }
             

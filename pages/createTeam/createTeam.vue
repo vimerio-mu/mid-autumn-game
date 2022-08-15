@@ -38,7 +38,7 @@
 			openDiaryPage() {
 				uni.navigateTo({
 					// 将teamName传给之后的页面
-					url: `/pages/diary/diary?teamName=${this.teamName}`,
+					url: `/pages/leaderDiary/leaderDiary?teamName=${this.teamName}`,
 				});
 				this.$refs.popupSuccess.close()
 			},

@@ -3,7 +3,7 @@
 		<image class="indexBg" :style="'height:'+ screenHeight +'px !important;'" src="../../static/bg.jpeg"></image>
 		<view class="btnGroup">
 			<button @click="openCreateTeamPage">发起组队</button>
-			<button>参与组队</button>
+			<button @click="openJoinTeamPage">参与组队</button>
 		</view>
 		<button class="rulesBtn" @click="openRulePopup">游戏规则</button>
 		<button class="inditifyBtn" @click="openInfoPage">身份介绍</button>
@@ -84,6 +84,11 @@
 			openCreateTeamPage() {
 				uni.navigateTo({
 					url: '/pages/createTeam/createTeam',
+				});
+			},
+			openJoinTeamPage() {
+				uni.navigateTo({
+					url: '/pages/joinTeam/joinTeam',
 				});
 			}
 		}

@@ -1,0 +1,48 @@
+
+.banner {
+	margin: 25rpx;
+	width: 700rpx;
+	height: 200rpx;
+}
+.textContainer {
+	background-color: #eee;
+	margin: 25rpx;
+	width: 700rpx;
+	display: flex;    /*设置显示样式**/
+	align-items: center;    /**子view垂直居中*/
+	vertical-align: center; /**垂直居中*/
+	justify-content: center; /**内容居中*/
+	flex-direction:row;
+}
+.rulesBtn {
+	border-radius: 25%;
+	width: 200rpx;
+	height: 100rpx;
+	background-color: dimgray;
+	position: absolute;
+	top: 50rpx;
+	right: 30rpx;
+}
+.btnGroup {
+	display: flex;
+	width: 500rpx;
+	height: 100rpx;
+	position: absolute;
+	bottom: 100rpx;
+	right: 125rpx;
+}
+.diaryContainer {
+	background-color: aqua;
+}
+.popup {
+	border: 1px solid red;
+	background-color: #eeeeee;
+	height: 200rpx;
+	width: 500rpx;
+}
+.demo {
+	height: 200rpx;
+	background-color: grey;
+	border-bottom: 5px solid red;
+}
+

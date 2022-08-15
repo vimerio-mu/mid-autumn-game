@@ -98,7 +98,7 @@ var components
 try {
   components = {
     IdentifyInfo: function() {
-      return __webpack_require__.e(/*! import() | components/IdentifyInfo/IdentifyInfo */ "components/IdentifyInfo/IdentifyInfo").then(__webpack_require__.bind(null, /*! @/components/IdentifyInfo/IdentifyInfo.vue */ 84))
+      return __webpack_require__.e(/*! import() | components/IdentifyInfo/IdentifyInfo */ "components/IdentifyInfo/IdentifyInfo").then(__webpack_require__.bind(null, /*! @/components/IdentifyInfo/IdentifyInfo.vue */ 113))
     }
   }
 } catch (e) {
@@ -170,9 +170,9 @@ var _default =
   data: function data() {
     return {
       list: [
-      { src: '@/static/c1.png', info: '身份1' },
-      { src: '@/static/c2.png', info: '身份2' },
-      { src: '@/static/c3.png', info: '身份3' }] };
+      { src: '/static/c1.png', info: '身份1' },
+      { src: '/static/c2.png', info: '身份2' },
+      { src: '/static/c3.png', info: '身份3' }] };
 
 
 

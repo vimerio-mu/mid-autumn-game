@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "身份介绍",
+  "defaultTitle": "造月计划",
   "pullRefresh": false,
   "usingComponents": {
     "identify-info": "/components/IdentifyInfo/IdentifyInfo"

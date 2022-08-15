@@ -1,0 +1,16 @@
+
+.banner {
+	margin: 25rpx;
+	width: 700rpx;
+}
+.input {
+	background-color: white;
+	margin: 25rpx;
+	width: 700rpx;
+	height: 100rpx;
+	border: 1px solid gray;
+}
+.popup {
+	background-color: white;
+}
+

@@ -1,0 +1,1 @@
+<view><image class="banner" src="../../static/bg.jpeg" mode></image><view a:for="{{list}}" a:for-item="item" a:for-index="index" a:key="index"><view class="row"><text>{{item.name}}</text><text>{{item.state===1?'进行中':'已完成'}}</text></view></view><button type="default" data-event-opts="{{[['tap',[['back',['$event']]]]]}}" onTap="__e">返回</button></view>
