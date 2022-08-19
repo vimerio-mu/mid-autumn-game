@@ -1,0 +1,22 @@
+{
+  "name": "mid-autumn-game",
+  "version": "1.0.0",
+  "description": "抛去活动图不谈，整个页面主要就是三个按钮",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vimerio-mu/mid-autumn-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vimerio-mu/mid-autumn-game/issues"
+  },
+  "homepage": "https://github.com/vimerio-mu/mid-autumn-game#readme",
+  "dependencies": {
+    "dom-to-image": "^2.6.0"
+  }
+}

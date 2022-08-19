@@ -5,9 +5,13 @@
     "pages/card/card",
     "pages/history/history",
     "pages/createTeam/createTeam",
-    "pages/diary/diary",
+    "pages/leaderDiary/leaderDiary",
     "pages/submit/submit",
-    "pages/share/share"
+    "pages/share/share",
+    "pages/joinTeam/joinTeam",
+    "pages/memberDiary/memberDiary",
+    "pages/memberCheck/memberCheck",
+    "pages/test/test"
   ],
   "subPackages": [],
   "window": {

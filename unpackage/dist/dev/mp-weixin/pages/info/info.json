@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "身份介绍",
+  "navigationBarTitleText": "造月计划",
   "enablePullDownRefresh": false,
   "usingComponents": {
     "identify-info": "/components/IdentifyInfo/IdentifyInfo"

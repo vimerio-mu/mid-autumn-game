@@ -92,6 +92,14 @@
                 "enablePullDownRefresh": false
             }
             
+        },{
+            "path" : "pages/test/test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "造月计划",
+                "enablePullDownRefresh": false
+            }
+            
         }
     ],
 	"globalStyle": {

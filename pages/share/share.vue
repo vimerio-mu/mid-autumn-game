@@ -6,15 +6,17 @@
 				请与队员合影后上传公司论坛后获取抽奖资格
 			</text>
 		</view>
-		<view class="textContainer">
-			<text>{{teamName}}</text>
-		</view>
-		<view class="mainContainer">
-			<view class="subContainer" v-for="item in teamMembers" :key="item.id">
-				<text>{{item.identify}} + {{item.name}}</text>
+		<view id="share">
+			<view class="textContainer">
+				<text>{{teamName}}</text>
 			</view>
-			<view class="subContainer">
-				<text>{{diary}}</text>
+			<view class="mainContainer">
+				<view class="subContainer" v-for="item in teamMembers" :key="item.id">
+					<text>{{item.identify}} + {{item.name}}</text>
+				</view>
+				<view class="subContainer">
+					<text>{{diary}}</text>
+				</view>
 			</view>
 		</view>
 		<view class="btnGroup">
@@ -25,6 +27,7 @@
 </template>
 
 <script>
+	import domtoimage from 'dom-to-image';
 	export default {
 		data() {
 			return {
@@ -57,8 +60,22 @@
 		},
 		methods: {
 			downloadAsImg() {
+				let vm = this
 				// 实现元素转图片
-				
+				var context = dd.createCanvasContext('firstCanvas')
+				context.font = "20upx serif"; // 设置文案大小和字体
+				context.fillText("Canvas 详解1", 0, 0);
+				context.fillText("Canvas 详解2", 20, 0);
+				context.draw()
+				context.toTempFilePath({
+					success(res) {
+						dd.saveImage({
+							url:res.tempFilePath,
+							success: () => {console.log('save success')},
+							fail: (e) => {console.log(e)}
+						});
+					}
+				});
 				// 实现元素转图片
 			},
 			toIndex() {

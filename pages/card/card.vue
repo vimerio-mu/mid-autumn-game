@@ -56,13 +56,8 @@
 		},
 		methods: {
 			openRulePopup(){
-				// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
 				this.$refs.rule.open('center');
 			},
-			// openInfoPopup(){
-			// 	// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
-			// 	this.$refs.info.open('center');
-			// }
 			openInfoPage() {
 				uni.navigateTo({
 					url: '/pages/info/info',

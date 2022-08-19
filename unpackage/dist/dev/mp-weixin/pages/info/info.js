@@ -98,7 +98,7 @@ var components
 try {
   components = {
     IdentifyInfo: function() {
-      return __webpack_require__.e(/*! import() | components/IdentifyInfo/IdentifyInfo */ "components/IdentifyInfo/IdentifyInfo").then(__webpack_require__.bind(null, /*! @/components/IdentifyInfo/IdentifyInfo.vue */ 55))
+      return __webpack_require__.e(/*! import() | components/IdentifyInfo/IdentifyInfo */ "components/IdentifyInfo/IdentifyInfo").then(__webpack_require__.bind(null, /*! @/components/IdentifyInfo/IdentifyInfo.vue */ 127))
     }
   }
 } catch (e) {

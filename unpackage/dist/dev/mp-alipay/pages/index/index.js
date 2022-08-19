@@ -106,13 +106,7 @@ var components
 try {
   components = {
     uniPopup: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 92))
-    },
-    uniList: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 99))
-    },
-    uniListItem: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 106))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 107))
     }
   }
 } catch (e) {
@@ -133,9 +127,15 @@ try {
   }
 }
 var render = function() {
+  var this$1 = this
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  if (!_vm._isMounted) {
+    _vm.e0 = function() {
+      this$1.$refs.rule.close()
+    }
+  }
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -211,23 +211,30 @@ __webpack_require__.r(__webpack_exports__);
 var _default =
 {
   data: function data() {
-    return {
-      screenHeight: 0 };
+    return {};
+
 
   },
   onLoad: function onLoad() {
-    this.screenHeight = uni.getSystemInfoSync().windowHeight;
-    console.log(this.screenHeight);
+    dd.getImageInfo({
+      src: '/static/抽卡页背景.png',
+      success: function success(res) {
+        console.log(JSON.stringify(res.path));
+      } });
+
+    console.log(getUrlBase64('/static/抽卡页背景.png'));
+    // 获取用户工号
+
+    // 获取用户工号
+
+    // 判断用户是否已经获取了身份牌，如果获取了直接跳转到card页面
+
+    // 判断用户是否已经获取了身份牌，如果获取了直接跳转到card页面
   },
   methods: {
     openRulePopup: function openRulePopup() {
-      // 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
       this.$refs.rule.open('center');
     },
-    // openInfoPopup(){
-    // 	// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
-    // 	this.$refs.info.open('center');
-    // }
     openInfoPage: function openInfoPage() {
       uni.navigateTo({
         url: '/pages/info/info' });

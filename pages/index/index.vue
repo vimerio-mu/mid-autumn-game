@@ -1,34 +1,34 @@
 <template>
-	<view >
-		<image class="indexBg" :style="'height:'+ screenHeight +'px !important;'" src="../../static/bg.jpeg"></image>
-		<button class="inditifyBtn" @click="openCardPopup">点击抽取身份牌</button>
-		<button class="rulesBtn" @click="openRulePopup">游戏规则</button>
-		<button class="inditifyIfoBtn" @click="openInfoPage">身份介绍</button>
+	<view>
+		<image src="~@/static/抽卡页背景.png" class="backgournd"></image>
+		<view class="bottom">
+			<image src="~@/static/揭晓身份按钮背景.png" class="indBtnBg"></image>
+			<image src="~@/static/按钮/揭晓身份.png" class="indBtnImg"></image>
+			<button class="indBtn"></button>
+		</view>
+		<image src="~@/static/按钮/活动规则.png" class="ruleBtnImg"></image>
+		<button class="ruleBtn" @click="openRulePopup"></button>
+		<image src="~@/static/按钮/身份介绍.png" class="infoBtnImg"></image>
+		<button class="infoBtn"></button>
 		<uni-popup ref="rule" type="center">
+			<image src="~@/static/弹窗/游戏规则.png" class="popupImg"></image>
 			<scroll-view scroll-y="true" class="popup">
-				<view class="demo">
-					很大的游戏介绍1
+				<view class="popText">
+					<text class="title">游戏规则</text>
+					<text>
+						1、输入框1：“创造一个属于你们的月球吧”：+提交按钮
+						3、输入框3：“请与成员开启“太空日记”接龙吧”：（提示框内容：你的日记至少要有一个”月“字哟”）+提交按钮
+						1、队长点击“完成组队”后身份不匹配时，所有成员显示弹框页面：“身份不匹配，请重新组队“ 
+					</text>
+					<text class="title">奖项设置</text>
+					<text>
+						2、关闭弹窗按钮（可返回完成组队前环节，可继续邀请组员加入，重新点击完成组队）
+						4、文案：茫茫太空，点亮一颗专属月球，记录你们的探险旅程，邂逅一场华丽的月球星空吧。
+						</text>
 				</view>
-				<view class="demo">
-					很大的游戏介绍2
-				</view>
-				<view class="demo">
-					很大的游戏介绍3
-				</view>
+				<image src="~@/static/按钮/收下身份牌.png" class="confirmBtnImg"></image>
+				<button class="confirmBtn" @click="() => {this.$refs.rule.close()}">确认</button>
 			</scroll-view>
-		</uni-popup>
-		<uni-popup ref="info" type="center">
-			<view class="popup">
-				<text>身份介绍</text>
-				<uni-list>
-					<uni-list-item title="1" note="">
-						<text>身份1</text>
-					</uni-list-item>
-					<uni-list-item title="2" note="">
-						<text>身份2</text>
-					</uni-list-item>
-				</uni-list>
-			</view>
 		</uni-popup>
 		<uni-popup ref="card" type="center">
 			<view class="popup">
@@ -43,22 +43,29 @@
 	export default {
 		data() {
 			return {
-				screenHeight: 0
+				
 			}
 		},
-		onLoad() {
-			this.screenHeight = uni.getSystemInfoSync().windowHeight
-			console.log(this.screenHeight)
+		onLoad() {	
+			dd.getImageInfo({
+			      src:'/static/抽卡页背景.png',
+			      success:(res)=>{
+			        console.log(JSON.stringify(res.path))
+			      }
+			    })
+			console.log(getUrlBase64('/static/抽卡页背景.png'))
+			// 获取用户工号
+			
+			// 获取用户工号
+			
+			// 判断用户是否已经获取了身份牌，如果获取了直接跳转到card页面
+			
+			// 判断用户是否已经获取了身份牌，如果获取了直接跳转到card页面
 		},
 		methods: {
 			openRulePopup(){
-				// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
 				this.$refs.rule.open('center');
 			},
-			// openInfoPopup(){
-			// 	// 通过组件定义的ref调用uni-popup方法 ,如果传入参数 ，type 属性将失效 ，仅支持 ['top','left','bottom','right','center']
-			// 	this.$refs.info.open('center');
-			// }
 			openInfoPage() {
 				uni.navigateTo({
 					url: '/pages/info/info',
@@ -78,47 +85,108 @@
 </script>
 
 <style>	
-	.indexBg {
-		overflow: hidden;
-		width: 750upx;
-		background-color: #eeeeee;
+	.backgournd {
+		z-index: -999;
+		width: 750rpx;
+		height: 1440rpx;
 	}
-	.inditifyBtn {
-		border-radius: 25%;
-		width: 500upx;
-		height: 100upx;
-		background-color: dimgray;
+	.indBtnBg {
 		position: absolute;
-		bottom: 100upx;
-		right: 125upx;
+		bottom: 0;
+		height: 272rpx;
+		width: 100%;
 	}
-	.rulesBtn {
-		border-radius: 25%;
-		width: 200upx;
-		height: 100upx;
-		background-color: dimgray;
+	.indBtnImg {
 		position: absolute;
-		top: 100upx;
-		right: 30upx;
+		bottom: 122rpx;
+		width: 474rpx;
+		height: 186rpx;
+		left: 138rpx;
 	}
-	.inditifyIfoBtn {
-		border-radius: 25%;
-		width: 200upx;
-		height: 100upx;
-		background-color: dimgray;
+	.indBtn {
+		background-color: transparent;
+		border: none;
 		position: absolute;
-		top: 210upx;
-		right: 30upx;
+		bottom: 122rpx;
+		width: 474rpx;
+		height: 186rpx;
+		left: 138rpx;
+	}
+	.ruleBtnImg {
+		position: absolute;
+		right: 0;
+		top: 80rpx;
+		width: 128rpx;
+		height: 134rpx;
+	}
+	.ruleBtn {
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		right: 0;
+		top: 80rpx;
+		width: 128rpx;
+		height: 134rpx;
+	}
+	.infoBtnImg {
+		position: absolute;
+		left: 48rpx;
+		top: 80rpx;
+		width: 128rpx;
+		height: 134rpx;
+	}
+	.infoBtn {
+		background-color: transparent;
+		border: none;
+		position: absolute;
+		left: 48rpx;
+		top: 80rpx;
+		width: 128rpx;
+		height: 134rpx;
+	}
+	.popupImg {
+		position: absolute;
+		z-index: -1;
+		width: 654rpx;
+		height: 900rpx;
 	}
 	.popup {
-		border: 1px solid red;
-		background-color: #eeeeee;
-		height: 200upx;
-		width: 500upx;
+		width: 654rpx;
+		height: 900rpx;
+		line-height: 40rpx;
 	}
-	.demo {
-		height: 200upx;
-		background-color: grey;
-		border-bottom: 5px solid red;
+	.title {
+		display: block;
+		color: #DBEDFA;
+		font-family: PingFangSC-Regular, PingFang SC;
+		line-height: 80rpx;
+	}
+	.popText {
+		margin: 160rpx 92rpx 200rpx 92rpx;
+		height: 540rpx;
+		overflow: scroll;
+		font-size: 28rpx;
+		color: #fff;
+		font-family: PingFangSC-Regular, PingFang SC;
+	}
+	.confirmBtnImg {
+		width: 240rpx;
+		height: 88rpx;
+		position: absolute;
+		bottom: 72rpx;
+		left: 208rpx;
+	}
+	.confirmBtn {
+		background-color: transparent;
+		border: none;
+		width: 240rpx;
+		height: 88rpx;
+		position: absolute;
+		bottom: 72rpx;
+		left: 208rpx;
+		color: #fff;
+		line-height: 88rpx;
+		letter-spacing: 5rpx;
+		font-family: PingFangSC-Regular, PingFang SC;
 	}
 </style>
