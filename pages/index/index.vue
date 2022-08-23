@@ -6,11 +6,12 @@
 			<image src="../../static/button/recover.png" class="indBtnImg"></image>
 			<button class="indBtn" @click="openCardPopup"></button>
 		</view>
-		<image src="../../static/button/rule.png" class="ruleBtnImg"></image>
-		<button class="ruleBtn" @click="openRulePopup"></button>
+<!-- 		<image src="../../static/button/rule.png" class="ruleBtnImg"></image>
+		<button class="ruleBtn" @click="openRulePopup"></button> -->
 		<image src="../../static/button/info.png" class="infoBtnImg"></image>
 		<button class="infoBtn"></button>
-		<uni-popup ref="rule" type="center">
+		<RulePopup></RulePopup>
+<!-- 		<uni-popup ref="rule" type="center">
 			<image src="../../static/popup/rulePopup.png" class="popupImg"></image>
 			<scroll-view scroll-y="true" class="popup">
 				<view class="popText">
@@ -29,7 +30,7 @@
 				<image src="../../static/button/btn.png" class="confirmBtnImg"></image>
 				<button class="confirmBtn" @click="closeRulePopup">确认</button>
 			</scroll-view>
-		</uni-popup>
+		</uni-popup> -->
 		<view class="test" v-if="openCard">
 			<view class="identityCard">
 				<image src="../../static/button/close.png" class="closeBtnBg"></image>
@@ -95,12 +96,6 @@
 			// 判断用户是否已经获取了身份牌，如果获取了直接跳转到card页面
 		},
 		methods: {
-			closeRulePopup() {
-				this.$refs.rule.close()
-			},
-			openRulePopup(){
-				this.$refs.rule.open('center');
-			},
 			openInfoPage() {
 				uni.navigateTo({
 					url: '/pages/info/info',
@@ -152,22 +147,6 @@
 		height: 186rpx;
 		left: 138rpx;
 	}
-	.ruleBtnImg {
-		position: absolute;
-		right: 0;
-		top: 80rpx;
-		width: 128rpx;
-		height: 134rpx;
-	}
-	.ruleBtn {
-		background-color: transparent;
-		border: none;
-		position: absolute;
-		right: 0;
-		top: 80rpx;
-		width: 128rpx;
-		height: 134rpx;
-	}
 	.infoBtnImg {
 		position: absolute;
 		left: 48rpx;
@@ -183,51 +162,6 @@
 		top: 80rpx;
 		width: 128rpx;
 		height: 134rpx;
-	}
-	.popupImg {
-		position: absolute;
-		z-index: -1;
-		width: 654rpx;
-		height: 900rpx;
-	}
-	.popup {
-		width: 654rpx;
-		height: 900rpx;
-		line-height: 40rpx;
-	}
-	.title {
-		display: block;
-		color: #DBEDFA;
-		font-family: PingFangSC-Regular, PingFang SC;
-		line-height: 80rpx;
-	}
-	.popText {
-		margin: 160rpx 92rpx 200rpx 92rpx;
-		height: 540rpx;
-		overflow: scroll;
-		font-size: 28rpx;
-		color: #fff;
-		font-family: PingFangSC-Regular, PingFang SC;
-	}
-	.confirmBtnImg {
-		width: 240rpx;
-		height: 88rpx;
-		position: absolute;
-		bottom: 72rpx;
-		left: 208rpx;
-	}
-	.confirmBtn {
-		background-color: transparent;
-		border: none;
-		width: 240rpx;
-		height: 88rpx;
-		position: absolute;
-		bottom: 72rpx;
-		left: 208rpx;
-		color: #fff;
-		line-height: 88rpx;
-		letter-spacing: 5rpx;
-		font-family: PingFangSC-Regular, PingFang SC;
 	}
 	.identityCard {
 		width: 550rpx;

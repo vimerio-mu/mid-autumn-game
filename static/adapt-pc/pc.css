@@ -1,9 +1,3 @@
-/**
- * uni-app 电脑端浏览兼容样式表
- * 作者：河浪
- * 联系方式：QQ 1846492969，邮箱 helang.love@qq.com
- */
-
 /* 隐藏页面内容 */
 body[adapt='pc']>*{
 	display: none !important;
@@ -15,8 +9,7 @@ body[adapt='pc']>uni-adapt-pc{
 
 body[adapt='pc'] {
 	margin: 0;
-	background-color: #fff;
-	background-color: ##151823;
+	background-color: #151823;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

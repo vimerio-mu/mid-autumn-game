@@ -135,7 +135,6 @@
 		left: 208rpx;
 		color: #fff;
 		line-height: 88rpx;
-		letter-spacing: 5rpx;
 		font-family: PingFangSC-Regular, PingFang SC;
 	}
 </style>
