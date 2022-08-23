@@ -106,10 +106,12 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"backgroundColor": "#000000",
 		"app-plus": {
-			"background": "#efeff4"
+			"background": "#efeff4",
+			"scrollIndicator":"none"
 		}
+		// "maxWidth": 500
 	},
 	"uni-app": {  
 	    "scripts": {  

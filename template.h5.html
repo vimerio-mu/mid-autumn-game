@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+		<meta name="Copyright" content="helang">
+		<link rel="shortcut icon" type="image/png" href="/uniapp-extend/static/logo.png"/>
+		<meta name="keywords" content="黄河爱浪,WEB前端河浪,jQuery插件开发者河浪">
+		<meta name="description" content="公众号:web-7258,QQ:1846492969,邮箱:helang.love@qq.com">
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
+            })
+        </script>
+        <link rel="stylesheet" href="/static/index.css" />
+		<!-- uni-app 电脑端浏览兼容样式表 -->
+		<link rel="stylesheet" href="/static/adapt-pc/pc.css" />
+    </head>
+    <body>
+        <noscript>
+            <strong>Please enable JavaScript to continue.</strong>
+        </noscript>
+        <div id="app"></div>
+		
+		<!-- uni-app 电脑端兼容模板容器 -->
+		<uni-adapt-pc></uni-adapt-pc>
+		<!-- uni-app 电脑端兼容模板 -->
+		<script type="text/html" id="tpl-adapt-pc">
+			<div class="container">
+				<div class="iframe">
+					<iframe src="mobile-href"></iframe>
+				</div>
+			</div>
+		</script>
+		<!-- uni-app 电脑端浏览兼容脚本文件 -->
+		<script type="text/javascript" src="/static/adapt-pc/pc.js"></script>
+        <!-- built files will be auto injected -->
+    </body>
+</html>

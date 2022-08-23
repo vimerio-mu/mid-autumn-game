@@ -1,4 +1,8 @@
 
+@font-face {
+	font-family: "优设标题黑";
+	src: url(/static/优设标题黑.ttf);
+}
 .banner {
 	margin: 25rpx;
 	width: 700rpx;
@@ -11,6 +15,60 @@
 	border: 1px solid gray;
 }
 .popup {
-	background-color: white;
+	width: 654rpx;
+	height: 448rpx;
+	line-height: 40rpx;
+}
+.popupBg {
+	position: absolute;
+	z-index: -1;
+	width: 654rpx;
+	height: 448rpx;
+}
+.title {
+	position: absolute;
+	top: 20rpx;
+	left: 226rpx;
+	font-size: 56rpx;
+	color: #fff;
+	font-family: "优设标题黑";
+}
+.popText {
+	text-align: center;
+	font-size: 28rpx;
+	color: #fff;
+	font-family: PingFangSC-Regular, PingFang SC;
+}
+.success {
+	position: absolute;
+	bottom: 224rpx;
+	left: 172rpx;
+	height: 80rpx;
+}
+.fail {
+	position: absolute;
+	bottom: 224rpx;
+	left: 230rpx;
+	height: 80rpx;
+}
+.BtnBg {
+	width: 240rpx;
+	height: 88rpx;
+	position: absolute;
+	bottom: 72rpx;
+	left: 208rpx;
+}
+.btn {
+	background-color: transparent;
+	border: none;
+	width: 240rpx;
+	height: 88rpx;
+	position: absolute;
+	bottom: 72rpx;
+	left: 208rpx;
+	color: #fff;
+	line-height: 88rpx;
+	letter-spacing: 5rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
 }
 

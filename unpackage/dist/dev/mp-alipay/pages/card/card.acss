@@ -1,53 +1,156 @@
 
-.indexBg {
-	overflow: hidden;
+.bgImg.data-v-99f1c1f4{
+	position: absolute;
 	width: 750rpx;
-	background-color: #eeeeee;
+	height: 100%;
 }
-.btnGroup {
-	display: flex;
-	width: 500rpx;
-	height: 100rpx;
+.indBtnBg.data-v-99f1c1f4 {
 	position: absolute;
-	bottom: 100rpx;
-	right: 125rpx;
+	bottom: 0;
+	height: 272rpx;
+	width: 100%;
 }
-.rulesBtn {
-	border-radius: 25%;
-	width: 200rpx;
-	height: 100rpx;
-	background-color: dimgray;
+.indBtnImg.data-v-99f1c1f4 {
 	position: absolute;
-	top: 100rpx;
-	right: 30rpx;
+	bottom: 122rpx;
+	width: 474rpx;
+	height: 186rpx;
+	left: 138rpx;
 }
-.inditifyBtn {
-	border-radius: 25%;
-	width: 200rpx;
-	height: 100rpx;
-	background-color: dimgray;
+.indBtn.data-v-99f1c1f4 {
+	background-color: transparent;
+	border: none;
 	position: absolute;
-	top: 210rpx;
-	right: 30rpx;
+	bottom: 122rpx;
+	width: 474rpx;
+	height: 186rpx;
+	left: 138rpx;
 }
-.historyBtn {
-	border-radius: 25%;
-	width: 200rpx;
-	height: 100rpx;
-	background-color: dimgray;
+.ruleBtnImg.data-v-99f1c1f4 {
 	position: absolute;
-	top: 320rpx;
-	right: 30rpx;
+	right: 0;
+	top: 80rpx;
+	width: 128rpx;
+	height: 134rpx;
 }
-.popup {
-	border: 1px solid red;
-	background-color: #eeeeee;
-	height: 200rpx;
-	width: 500rpx;
+.ruleBtn.data-v-99f1c1f4 {
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 80rpx;
+	width: 128rpx;
+	height: 134rpx;
 }
-.demo {
-	height: 200rpx;
-	background-color: grey;
-	border-bottom: 5px solid red;
+.infoBtnImg.data-v-99f1c1f4 {
+	position: absolute;
+	left: 48rpx;
+	top: 80rpx;
+	width: 128rpx;
+	height: 134rpx;
+}
+.infoBtn.data-v-99f1c1f4 {
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	left: 48rpx;
+	top: 80rpx;
+	width: 128rpx;
+	height: 134rpx;
+}
+.popupImg.data-v-99f1c1f4 {
+	position: absolute;
+	z-index: -1;
+	width: 654rpx;
+	height: 900rpx;
+}
+.popup.data-v-99f1c1f4 {
+	width: 654rpx;
+	height: 900rpx;
+	line-height: 40rpx;
+}
+.title.data-v-99f1c1f4 {
+	display: block;
+	color: #DBEDFA;
+	font-family: PingFangSC-Regular, PingFang SC;
+	line-height: 80rpx;
+}
+.popText.data-v-99f1c1f4 {
+	margin: 160rpx 92rpx 200rpx 92rpx;
+	height: 540rpx;
+	overflow: scroll;
+	font-size: 28rpx;
+	color: #fff;
+	font-family: PingFangSC-Regular, PingFang SC;
+}
+.confirmBtnImg.data-v-99f1c1f4 {
+	width: 240rpx;
+	height: 88rpx;
+	position: absolute;
+	bottom: 72rpx;
+	left: 208rpx;
+}
+.confirmBtn.data-v-99f1c1f4 {
+	background-color: transparent;
+	border: none;
+	width: 240rpx;
+	height: 88rpx;
+	position: absolute;
+	bottom: 72rpx;
+	left: 208rpx;
+	color: #fff;
+	line-height: 88rpx;
+	letter-spacing: 5rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+}
+.historyBtnBg.data-v-99f1c1f4 {
+	position: fixed;
+	left: 48rpx;
+	top: 254rpx;
+	width: 128rpx;
+	height: 128rpx;
+}
+.historyBtn.data-v-99f1c1f4{
+	background-color: transparent;
+	border: none;
+	position: fixed;
+	left: 48rpx;
+	top: 254rpx;
+	width: 128rpx;
+	height: 128rpx;
+}
+.identityCard.data-v-99f1c1f4{
+	position: absolute;
+	top: 400rpx;
+	left: 228rpx;
+	right: 228rpx;
+	text-align: center;
+}
+.identityCardImg.data-v-99f1c1f4{
+	position: relative;
+	width: 294rpx;
+	height: 88rpx;
+}
+.identityText.data-v-99f1c1f4{
+	position: relative;
+	height: 34rpx;
+	font-size: 24rpx;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 34rpx;
+	bottom: 42rpx;
+}
+.btnImg.data-v-99f1c1f4{
+	width: 308rpx;
+	height: 122rpx;
+	position: fixed;
+	bottom: 96rpx;
+}
+.joinBtn.data-v-99f1c1f4{
+	 left: 48rpx;
+}
+.createBtn.data-v-99f1c1f4{
+	 right: 48rpx;
 }
 

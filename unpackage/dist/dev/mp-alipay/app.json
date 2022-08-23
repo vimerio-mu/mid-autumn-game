@@ -17,7 +17,7 @@
   "window": {
     "defaultTitle": "uni-app",
     "titleBarColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#000000"
   },
   "usingComponents": {
     "plugin-wrapper": "/plugin-wrapper"
