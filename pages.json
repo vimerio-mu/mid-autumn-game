@@ -1,5 +1,16 @@
 {
 	"pages": [
+		// #ifdef H5
+		{
+		    "path" : "pages/login/login",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "造月计划",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		// #endif
 		{
 			"path": "pages/index/index",
 			"style": {

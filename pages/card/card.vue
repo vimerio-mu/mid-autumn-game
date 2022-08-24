@@ -155,22 +155,25 @@
 	.identityCardImg{
 		position: relative;
 		width: 294rpx;
-		height: 88rpx;
+		height: 136rpx;
 	}
 	.identityText{
-		position: relative;
+		position: absolute;
+		top: 96rpx;
+		left: 40rpx;
+		right: 40rpx;
 		height: 34rpx;
 		font-size: 24rpx;
 		font-family: PingFangSC-Semibold, PingFang SC;
 		font-weight: 600;
 		color: #FFFFFF;
-		line-height: 34rpx;
+		/* line-height: 34rpx; */
 		bottom: 42rpx;
 	}
 	.btnImg{
 		width: 308rpx;
 		height: 122rpx;
-		position: fixed;
+		position: absolute;
 		bottom: 96rpx;
 	}
 	 .joinBtn{

@@ -104,7 +104,6 @@
 			openCardPopup() {
 				// this.$refs.card.open('center');
 				this.openCard = true
-				console.log(this.openCard)
 			},
 			closeCardPopup() {
 				this.openCard = false
@@ -122,6 +121,7 @@
 <style scoped>	
 	.backgournd {
 		position: absolute;
+		
 		width: 750rpx;
 		height: 100%;
 	}

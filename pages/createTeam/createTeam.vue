@@ -1,10 +1,22 @@
 <template>
 	<view>
-		<image src="../../static/bg.jpeg" mode="" class="banner"></image>
-		<input class="input" type="text" :value="teamName" @input="onKeyInput" placeholder="队名输入框"/>
-		<text style="display: block;">创造一个属于你们的月球吧</text>
-		<text style="display: block;">一旦造月成功，名称将无法修改</text>
-		<button type="default" @click="createTeam">队伍创建</button>
+		<image src="../../static/moon3.png" class="backgournd" mode="widthFix"></image>
+		<image src="../../static/logo/02.png" class="logo"></image>
+		<text class="textTitle">给自己的月球取个名字</text>
+		<image src="../../static/popup/teamName.png" class="teamNameBg"></image>
+		<input type="text" :value="teamName" 
+		placeholder="请点击输入月球名称，字符上限10" placeholder-class="uni-input-placeholder"
+		maxlength=10
+		class="teamInput" @input="changeValue"/>
+		<view v-if="teamName.length === 0">
+			<image src="../../static/button/unable.png" class="teamNamebtn"></image>
+			<text class="text unable">创造月球</text>
+		</view>
+		<view v-if="teamName.length !== 0">
+			<image src="../../static/button/able.png" class="teamNamebtn"></image>
+			<button @click="createTeam" class="teamNamebtnHide"></button>
+			<text class="text able">创造月球</text>
+		</view>
 		<uni-popup ref="popupSuccess">
 			<view class="popup">
 				<image src="../../static/popup/popup.png" class="popupBg"></image>
@@ -30,9 +42,12 @@
 					</text>
 				</view>
 				<image src="../../static/button/btn.png" class="BtnBg"></image>
-				<button class="btn" @click="() => {this.$refs.popupError.close()}">返回</button>
+				<button class="btn" @click="closeErrorPopup">返回</button>
 			</view>
 		</uni-popup>
+		<view style="padding-top: 210rpx;">
+			<RulePopup></RulePopup>
+		</view>
 	</view>
 </template>
 
@@ -40,46 +55,79 @@
 	export default {
 		data() {
 			return {
-				teamName: ''
+				teamName: '',
+				username: '',
+				teamId:''
 			}
 		},
+		onLoad(options) {
+			this.username = options.username;
+		},
 		methods: {
+			changeValue(e) {
+				this.teamName = e.target.value;
+			},
 			createTeam() {
-				if(this.teamName.includes('占用')) {
-					this.$refs.popupError.open('center')
-				}else {
-					this.$refs.popupSuccess.open('center')
-				}
+				const vm = this
+				uni.request({
+					url:'http://10.20.147.32:8523/activity/team',
+					method:"POST",
+					data: {
+						teamLeader: vm.username,
+						teamName: vm.teamName
+					},
+					success:function(res) {
+						let code = res.data.code
+						if(code === 500) {
+							vm.$refs.popupError.open('center')
+						}else {
+							vm.teamId = res.data.data.teamId
+							vm.$refs.popupSuccess.open('center')
+						}
+					},
+					fail: function(e) {
+						console.log(e)
+					}
+				})
 			},
 			openDiaryPage() {
 				uni.navigateTo({
 					// 将teamName传给之后的页面
-					url: `/pages/leaderDiary/leaderDiary?teamName=${this.teamName}`,
+					url: `/pages/leaderDiary/leaderDiary??username=${this.username}&teamName=${this.teamName}&teamId=${this.teamId}`,
 				});
 				this.$refs.popupSuccess.close()
 			},
-			onKeyInput(event) {
-				this.teamName = event.target.value
+			closeErrorPopup() {
+				this.$refs.popupError.close()
 			}
 		}
 	}
 </script>
 
 <style>
-	@font-face {
-		font-family: "优设标题黑";
-		src: url('../../static/优设标题黑.ttf');
+	.backgournd {
+		position: absolute;
+		width: 750rpx;
+		height: 100%;
 	}
-	.banner {
-		margin: 25upx;
-		width: 700upx;
+	.logo {
+		height: 310rpx;
+		width: 688rpx;
+		position: absolute;
+		top: 54rpx;
+		left: 38rpx;
 	}
-	.input {
-		background-color: white;
-		margin: 25rpx;
-		width: 700rpx;
-		height: 100rpx;
-		border: 1px solid gray;
+	.textTitle {
+		font-size: 56rpx;
+		z-index: 2;
+		position: absolute;
+		top: 244rpx;
+		left: 124rpx;
+		color: #fff;
+		font-family: YouSheBiaoTiHei;
+		background: linear-gradient(122deg, #FFFFFF 0%, #DCEBFF 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 	.popup {
 		width: 654rpx;
@@ -98,7 +146,7 @@
 		left: 226upx;
 		font-size: 56upx;
 		color: #fff;
-		font-family: "优设标题黑";
+		font-family: "YouSheBiaoTiHei";
 	}
 	.popText {
 		text-align: center;
@@ -136,5 +184,63 @@
 		color: #fff;
 		line-height: 88rpx;
 		font-family: PingFangSC-Regular, PingFang SC;
+	}
+	.teamNameBg {
+		width: 654rpx;
+		height: 468rpx;
+		position: absolute;
+		bottom: 96rpx;
+		left: 48rpx;
+	}
+	.teamInput {
+		border: none;
+		background-color: transparent;
+		color: #FFFFFF;
+		position: absolute;
+		width: 654rpx;
+		bottom: 340rpx;
+		left: 48rpx;
+		text-align:center;
+		font-family: "YouSheBiaoTiHei";
+		font-size: 56rpx;
+	}
+	.uni-input-placeholder {
+		font-size: 28rpx;
+		font-family: PingFangSC-Semibold, PingFang SC;
+		font-weight: 600;
+		color: #FFFFFF;
+		opacity: 0.53;
+		line-height: 40px;
+	}
+	.teamNamebtn {
+		height: 82rpx;
+		width: 352rpx;
+		position: absolute;
+		bottom: 114rpx;
+		left: 198rpx;
+	}
+	.teamNamebtnHide {
+		height: 82rpx;
+		width: 352rpx;
+		position: absolute;
+		bottom: 114rpx;
+		left: 198rpx;
+		background-color: transparent;
+		border: none;
+		z-index: 3;
+	}
+	.text {
+		position: absolute;
+		bottom: 122rpx;
+		left: 274rpx;
+		font-family: "YouSheBiaoTiHei";
+		font-size: 56rpx;
+		line-height: 72rpx;
+	}
+	.unable {
+		color: #82838E;
+	}
+	.able {
+		color: #FFFFFF;
 	}
 </style>

@@ -28,6 +28,9 @@
 <script>
 	export default {
 		name:"RulePopup",
+		props: {
+			top: Number
+		},
 		data() {
 			return {
 				
@@ -35,6 +38,7 @@
 		},
 		onLoad() {
 			console.log('rulePopup')
+			
 		},
 		methods: {
 			closeRulePopup() {
@@ -82,7 +86,11 @@
 		line-height: 80rpx;
 	}
 	.popText {
-		margin: 160rpx 92rpx 200rpx 92rpx;
+		/* padding: 160rpx 92rpx 200rpx 92rpx; */
+		position: absolute;
+		top: 160rpx;
+		left: 92rpx;
+		right: 92rpx;
 		height: 540rpx;
 		overflow: scroll;
 		font-size: 28rpx;

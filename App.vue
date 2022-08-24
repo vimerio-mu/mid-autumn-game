@@ -16,6 +16,10 @@
 </script>
 
 <style lang="scss">
+	@font-face {
+		font-family: "YouSheBiaoTiHei";
+		src: url('/static/优设标题黑.ttf');
+	}
 	// #ifdef H5
 	body::-webkit-scrollbar,html::-webkit-scrollbar {
 	    display: none;
