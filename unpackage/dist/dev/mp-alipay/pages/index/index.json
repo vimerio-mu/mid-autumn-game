@@ -1,4 +1,6 @@
 {
   "defaultTitle": "造月计划",
-  "usingComponents": {}
+  "usingComponents": {
+    "rule-popup": "/components/RulePopup/RulePopup"
+  }
 }

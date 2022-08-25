@@ -4,50 +4,12 @@
 	width: 750rpx;
 	height: 100%;
 }
-.indBtnBg.data-v-99f1c1f4 {
-	position: absolute;
-	bottom: 0;
-	height: 272rpx;
-	width: 100%;
-}
-.indBtnImg.data-v-99f1c1f4 {
-	position: absolute;
-	bottom: 122rpx;
-	width: 474rpx;
-	height: 186rpx;
-	left: 138rpx;
-}
-.indBtn.data-v-99f1c1f4 {
-	background-color: transparent;
-	border: none;
-	position: absolute;
-	bottom: 122rpx;
-	width: 474rpx;
-	height: 186rpx;
-	left: 138rpx;
-}
-.ruleBtnImg.data-v-99f1c1f4 {
-	position: absolute;
-	right: 0;
-	top: 80rpx;
-	width: 128rpx;
-	height: 134rpx;
-}
-.ruleBtn.data-v-99f1c1f4 {
-	background-color: transparent;
-	border: none;
-	position: absolute;
-	right: 0;
-	top: 80rpx;
-	width: 128rpx;
-	height: 134rpx;
-}
 .infoBtnImg.data-v-99f1c1f4 {
 	position: absolute;
 	left: 48rpx;
 	top: 80rpx;
 	width: 128rpx;
-	height: 134rpx;
+	height: 138rpx;
 }
 .infoBtn.data-v-99f1c1f4 {
 	background-color: transparent;
@@ -56,101 +18,69 @@
 	left: 48rpx;
 	top: 80rpx;
 	width: 128rpx;
-	height: 134rpx;
-}
-.popupImg.data-v-99f1c1f4 {
-	position: absolute;
-	z-index: -1;
-	width: 654rpx;
-	height: 900rpx;
-}
-.popup.data-v-99f1c1f4 {
-	width: 654rpx;
-	height: 900rpx;
-	line-height: 40rpx;
-}
-.title.data-v-99f1c1f4 {
-	display: block;
-	color: #DBEDFA;
-	font-family: PingFangSC-Regular, PingFang SC;
-	line-height: 80rpx;
-}
-.popText.data-v-99f1c1f4 {
-	margin: 160rpx 92rpx 200rpx 92rpx;
-	height: 540rpx;
-	overflow: scroll;
-	font-size: 28rpx;
-	color: #fff;
-	font-family: PingFangSC-Regular, PingFang SC;
-}
-.confirmBtnImg.data-v-99f1c1f4 {
-	width: 240rpx;
-	height: 88rpx;
-	position: absolute;
-	bottom: 72rpx;
-	left: 208rpx;
-}
-.confirmBtn.data-v-99f1c1f4 {
-	background-color: transparent;
-	border: none;
-	width: 240rpx;
-	height: 88rpx;
-	position: absolute;
-	bottom: 72rpx;
-	left: 208rpx;
-	color: #fff;
-	line-height: 88rpx;
-	letter-spacing: 5rpx;
-	font-family: PingFangSC-Regular, PingFang SC;
+	height: 138rpx;
 }
 .historyBtnBg.data-v-99f1c1f4 {
-	position: fixed;
+	position: absolute;
 	left: 48rpx;
 	top: 254rpx;
 	width: 128rpx;
-	height: 128rpx;
+	height: 147rpx;
 }
 .historyBtn.data-v-99f1c1f4{
 	background-color: transparent;
 	border: none;
-	position: fixed;
+	position: absolute;
 	left: 48rpx;
 	top: 254rpx;
 	width: 128rpx;
-	height: 128rpx;
+	height: 147rpx;
 }
 .identityCard.data-v-99f1c1f4{
 	position: absolute;
 	top: 400rpx;
-	left: 228rpx;
-	right: 228rpx;
-	text-align: center;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	        transform: translate(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 .identityCardImg.data-v-99f1c1f4{
-	position: relative;
+	position: absolute;
 	width: 294rpx;
-	height: 88rpx;
+	height: 134rpx;
 }
 .identityText.data-v-99f1c1f4{
-	position: relative;
+	position: absolute;
 	height: 34rpx;
+	width: 294rpx;
+	bottom: 6rpx;
 	font-size: 24rpx;
 	font-family: PingFangSC-Semibold, PingFang SC;
 	font-weight: 600;
 	color: #FFFFFF;
 	line-height: 34rpx;
-	bottom: 42rpx;
+	text-align: center;
 }
 .btnImg.data-v-99f1c1f4{
 	width: 308rpx;
 	height: 122rpx;
-	position: fixed;
+	position: absolute;
 	bottom: 96rpx;
 }
-.joinBtn.data-v-99f1c1f4{
-	 left: 48rpx;
-}
 .createBtn.data-v-99f1c1f4{
-	 right: 48rpx;
+	left: 48rpx;
+}
+.joinBtn.data-v-99f1c1f4{
+	right: 48rpx;
+}
+.btn.data-v-99f1c1f4{
+	position: absolute;
+	width: 308rpx;
+	height: 122rpx;
+	bottom: 96rpx;
+	border: none;
+	background-color: transparent;
 }
 

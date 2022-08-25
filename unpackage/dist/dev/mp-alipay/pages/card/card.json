@@ -2,6 +2,6 @@
   "defaultTitle": "造月计划",
   "pullRefresh": false,
   "usingComponents": {
-    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup"
+    "rule-popup": "/components/RulePopup/RulePopup"
   }
 }

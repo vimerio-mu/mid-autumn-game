@@ -5,7 +5,7 @@
 		<text class="textTitle">给自己的月球取个名字</text>
 		<image src="../../static/popup/teamName.png" class="teamNameBg"></image>
 		<input type="text" :value="teamName" 
-		placeholder="请点击输入月球名称，字符上限10" placeholder-class="uni-input-placeholder"
+		placeholder="请点击输入月球名称，字符上限10" placeholder-class="input-placeholder"
 		maxlength=10
 		class="teamInput" @input="changeValue"/>
 		<view v-if="teamName.length === 0">
@@ -104,7 +104,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.backgournd {
 		position: absolute;
 		width: 750rpx;
@@ -204,7 +204,7 @@
 		font-family: "YouSheBiaoTiHei";
 		font-size: 56rpx;
 	}
-	.uni-input-placeholder {
+	/deep/.input-placeholder {
 		font-size: 28rpx;
 		font-family: PingFangSC-Semibold, PingFang SC;
 		font-weight: 600;

@@ -1,0 +1,67 @@
+
+.ruleBtnImg.data-v-62905326 {
+	position: absolute;
+	right: 0;
+	top: 80rpx;
+	width: 128rpx;
+	height: 134rpx;
+}
+.ruleBtn.data-v-62905326 {
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	right: 0;
+	top: 80rpx;
+	width: 128rpx;
+	height: 134rpx;
+}
+.popupImg.data-v-62905326 {
+	position: absolute;
+	z-index: -1;
+	width: 654rpx;
+	height: 900rpx;
+}
+.popup.data-v-62905326 {
+	width: 654rpx;
+	height: 900rpx;
+	line-height: 40rpx;
+}
+.title.data-v-62905326 {
+	display: block;
+	color: #DBEDFA;
+	font-family: PingFangSC-Regular, PingFang SC;
+	line-height: 80rpx;
+}
+.popText.data-v-62905326 {
+	/* padding: 160rpx 92rpx 200rpx 92rpx; */
+	position: absolute;
+	top: 160rpx;
+	left: 92rpx;
+	right: 92rpx;
+	height: 540rpx;
+	overflow: scroll;
+	font-size: 28rpx;
+	color: #fff;
+	font-family: PingFangSC-Regular, PingFang SC;
+}
+.confirmBtnImg.data-v-62905326 {
+	width: 240rpx;
+	height: 88rpx;
+	position: absolute;
+	bottom: 72rpx;
+	left: 208rpx;
+}
+.confirmBtn.data-v-62905326 {
+	background-color: transparent;
+	border: none;
+	width: 240rpx;
+	height: 88rpx;
+	position: absolute;
+	bottom: 72rpx;
+	left: 208rpx;
+	color: #fff;
+	line-height: 88rpx;
+	letter-spacing: 5rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+}
+

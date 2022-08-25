@@ -1,16 +1,140 @@
 
-.banner {
-	margin: 25rpx;
-	width: 700rpx;
+.backgournd.data-v-968d1b34 {
+		position: absolute;
+		width: 750rpx;
+		height: 100%;
 }
-.input {
-	background-color: white;
-	margin: 25rpx;
-	width: 700rpx;
-	height: 100rpx;
-	border: 1px solid gray;
+.logo.data-v-968d1b34 {
+		height: 310rpx;
+		width: 688rpx;
+		position: absolute;
+		top: 54rpx;
+		left: 38rpx;
 }
-.popup {
-	background-color: white;
+.textTitle.data-v-968d1b34 {
+		font-size: 56rpx;
+		z-index: 2;
+		position: absolute;
+		top: 244rpx;
+		left: 176rpx;
+		color: #fff;
+		font-family: YouSheBiaoTiHei;
+		background: linear-gradient(122deg, #FFFFFF 0%, #DCEBFF 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+.popup.data-v-968d1b34 {
+		width: 654rpx;
+		height: 448rpx;
+		line-height: 40rpx;
+}
+.popupBg.data-v-968d1b34 {
+		position: absolute;
+		z-index: -1;
+		width: 654rpx;
+		height: 448rpx;
+}
+.title.data-v-968d1b34 {
+		position: absolute;
+		top: 20rpx;
+		left: 226rpx;
+		font-size: 56rpx;
+		color: #fff;
+		font-family: "YouSheBiaoTiHei";
+}
+.popText.data-v-968d1b34 {
+		text-align: center;
+		font-size: 28rpx;
+		color: #fff;
+		font-family: PingFangSC-Regular, PingFang SC;
+}
+.success.data-v-968d1b34 {
+		position: absolute;
+		bottom: 224rpx;
+		left: 172rpx;
+		height: 80rpx;
+}
+.fail.data-v-968d1b34 {
+		position: absolute;
+		bottom: 224rpx;
+		left: 230rpx;
+		height: 80rpx;
+}
+.BtnBg.data-v-968d1b34 {
+		width: 240rpx;
+		height: 88rpx;
+		position: absolute;
+		bottom: 72rpx;
+		left: 208rpx;
+}
+.btn.data-v-968d1b34 {
+		background-color: transparent;
+		border: none;
+		width: 240rpx;
+		height: 88rpx;
+		position: absolute;
+		bottom: 72rpx;
+		left: 208rpx;
+		color: #fff;
+		line-height: 88rpx;
+		font-family: PingFangSC-Regular, PingFang SC;
+}
+.teamNameBg.data-v-968d1b34 {
+		width: 654rpx;
+		height: 468rpx;
+		position: absolute;
+		bottom: 96rpx;
+		left: 48rpx;
+}
+.teamInput.data-v-968d1b34 {
+		border: none;
+		background-color: transparent;
+		color: #FFFFFF;
+		position: absolute;
+		width: 654rpx;
+		bottom: 340rpx;
+		left: 48rpx;
+		text-align:center;
+		font-family: "YouSheBiaoTiHei";
+		font-size: 56rpx;
+}
+.data-v-968d1b34 .input-placeholder {
+		font-size: 28rpx;
+		font-family: PingFangSC-Semibold, PingFang SC;
+		font-weight: 600;
+		color: #FFFFFF;
+		opacity: 0.53;
+		line-height: 40px;
+}
+.teamNamebtn.data-v-968d1b34 {
+		height: 82rpx;
+		width: 352rpx;
+		position: absolute;
+		bottom: 114rpx;
+		left: 198rpx;
+}
+.teamNamebtnHide.data-v-968d1b34 {
+		height: 82rpx;
+		width: 352rpx;
+		position: absolute;
+		bottom: 114rpx;
+		left: 198rpx;
+		background-color: transparent;
+		border: none;
+		z-index: 3;
+}
+.text.data-v-968d1b34 {
+		position: absolute;
+		bottom: 122rpx;
+		left: 274rpx;
+		font-family: "YouSheBiaoTiHei";
+		font-size: 56rpx;
+		line-height: 72rpx;
+}
+.unable.data-v-968d1b34 {
+		color: #82838E;
+}
+.able.data-v-968d1b34 {
+		color: #FFFFFF;
 }
 

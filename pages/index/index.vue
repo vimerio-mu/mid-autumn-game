@@ -121,7 +121,6 @@
 <style scoped>	
 	.backgournd {
 		position: absolute;
-		
 		width: 750rpx;
 		height: 100%;
 	}

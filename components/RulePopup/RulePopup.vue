@@ -51,7 +51,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.ruleBtnImg {
 		position: absolute;
 		right: 0;

@@ -97,8 +97,8 @@ __webpack_require__.r(__webpack_exports__);
 var components
 try {
   components = {
-    uniPopup: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 107))
+    RulePopup: function() {
+      return __webpack_require__.e(/*! import() | components/RulePopup/RulePopup */ "components/RulePopup/RulePopup").then(__webpack_require__.bind(null, /*! @/components/RulePopup/RulePopup.vue */ 107))
     }
   }
 } catch (e) {
@@ -188,34 +188,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
     return {
       username: '', // 工号
       employeeName: '',
-      cardImg: '',
-      cardId: '' };
+      cardTitleImg: '',
+      cardId: '',
+      identityImg: '' };
 
   },
   methods: {
-    closeRulePopup: function closeRulePopup() {
-      this.$refs.rule.close();
-    },
-    // 打开活动规则弹窗
-    openRulePopup: function openRulePopup() {
-      this.$refs.rule.open('center');
-    },
     // 跳转到身份介绍页面
-    toIdentitiesInfo: function toIdentitiesInfo() {
+    toInfo: function toInfo() {
       uni.navigateTo({
-        url: '/pages/identitiesInfo/identitiesInfo' });
+        url: '/pages/info/info' });
 
     },
     // 跳转到发起组队页面
@@ -250,13 +238,16 @@ var _default =
           _this.employeeName = res.data.data.employeeName;
           switch (_this.cardId) {
             case 1:
-              _this.cardImg = '../../static/identity/1.png';
+              _this.cardTitleImg = '../../static/identity/1.png';
+              _this.identityImg = '../../static/identity/1bg.png';
               break;
             case 2:
-              _this.cardImg = '../../static/identity/2.png';
+              _this.cardTitleImg = '../../static/identity/2.png';
+              _this.identityImg = '../../static/identity/2bg.png';
               break;
             case 3:
-              _this.cardImg = '../../static/identity/3.png';
+              _this.cardTitleImg = '../../static/identity/3.png';
+              _this.identityImg = '../../static/identity/3bg.png';
               break;
             default:
               break;}

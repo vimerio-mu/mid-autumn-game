@@ -3,14 +3,16 @@
 		<image class="backgournd" src="../../static/moon2.png"></image>
 		<image class="title" src="../../static/logo/03.png"></image>
 		<text class="titleText">{{teamName}}</text>
-		<RulePopup style="top: 200rpx; z-index:1"></RulePopup>
+		<view style="padding-top: 210rpx;">
+			<RulePopup style="z-index: 1;"></RulePopup>
+		</view>
 		<image class="diaryPopup" src="../../static/popup/diary.png"></image>
 		<textarea class="ta" v-model="diary" @input="onKeyInput" placeholder-class="placeholder" maxlength="255"
 			placeholder="点击输入日记，让我们一起发掘时间褶皱中的浪漫，将脑海中的世界描绘出来。（提示：字符上限255）"></textarea>
 		<view class="save">
-			<image class="saveBtnImg" v-show="diary" src="../../static/button/able.png"></image>
-			<image class="saveBtnImg" v-show="!diary" src="../../static/button/unable.png"></image>
-			<button class="saveBtn" @click="saveDiary" :disabled="!diary">保存日记</button>
+			<image class="saveBtnImg" :style="disabled?'':'display:none;'" src="../../static/button/able.png"></image>
+			<image class="saveBtnImg" :style="disabled?'display:none;':''" src="../../static/button/unable.png"></image>
+			<button class="saveBtn" :class="{'saveBtnDisabled':!disabled}" @click="saveDiary" :disabled="!disabled">保存日记</button>
 		</view>
 		<!-- 保存日记成功弹窗 -->
 		<uni-popup ref="saveSuccess" type="center">
@@ -21,7 +23,7 @@
 				<image class="btnBg leftBtn" src="../../static/button/btn2.png"></image>
 				<button @click="toHistory()" class="btn leftBtn">造月历史</button>
 				<image class="btnBg rightBtn" src="../../static/button/btn.png"></image>
-				<button @click="check()" class="btn rightBtn">返回首页</button>
+				<button @click="toCard()" class="btn rightBtn">返回首页</button>
 			</view>
 		</uni-popup>
 		<!-- 保存失败 -->
@@ -52,11 +54,15 @@
 				msg:'',
 			}
 		},
+		computed: {
+			disabled() {
+				return this.diary 
+			}
+		},
 		onLoad: function (option) { //option为object类型，会序列化上个页面传递的参数
 			this.username = option.username;
 			this.teamName = option.teamName; //获取上个页面传递的参数。
 			this.teamId = option.teamId;
-			console.log(this.username,this.teamName,this.teamId)
 		},
 		methods: {
 			onKeyInput(event) {
@@ -97,13 +103,11 @@
 				uni.navigateTo({
 					url: `/pages/history/history?username=${this.username}`,
 				});
+				this.$refs.saveSuccess.close();
 			},
 			toCard(){
 				uni.navigateTo({
 					url: `/pages/card/card?username=${this.username}`,
-					success: res => {},
-					fail: () => {},
-					complete: () => {}
 				});
 				this.$refs.saveSuccess.close();
 			}
@@ -182,8 +186,10 @@
 		font-family: PingFangSC-Semibold, PingFang SC;
 		color: #FFFFFF;
 		line-height: 40rpx;
+		border: none;
+		background-color: transparent;
 	}
-	.placeholder{
+	/deep/.placeholder{
 		font-weight: 600;
 		opacity: 0.53;
 	}
@@ -211,12 +217,20 @@
 		color: #FFFFFF;
 		text-shadow: 0rpx 2rpx 8rpx #103780;
 	}
+	.saveBtnDisabled{
+		border: none;
+		background-color: transparent;
+		color: #82838E;
+		text-shadow: none;
+	}
+	/* #ifdef H5 */
 	.saveBtn[disabled]{
 		border: none;
 		background-color: transparent;
 		color: #82838E;
 		text-shadow: none;
 	}
+	/* #endif */
 	.popupContainer{
 		display: flex;
 		flex-direction: column;
