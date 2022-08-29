@@ -2,6 +2,7 @@
   "navigationBarTitleText": "造月计划",
   "enablePullDownRefresh": false,
   "usingComponents": {
+    "rule-popup": "/components/RulePopup/RulePopup",
     "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="container">
 		<image src="../../static/moon3.png" class="backgournd" mode="widthFix"></image>
 		<image src="../../static/logo/01.png" class="logo"></image>
 		<view >
@@ -31,7 +31,6 @@
 			},
 			login() {
 				const vm = this
-				console.log('click')
 				uni.request({
 					url:'http://10.20.147.32:8523/activity/identity/check/' + vm.username,
 					success: function(res) {
@@ -40,7 +39,7 @@
 								alert('用户不存在！')
 							}else {
 								uni.navigateTo({
-									url: `/pages/card/card?username=${vm.username}`
+									url: `/pages/index/index?username=${vm.username}`
 								});
 							}
 						},
@@ -54,6 +53,11 @@
 </script>
 
 <style scoped>
+	.container {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+	}
 	.backgournd {
 		position: absolute;
 		width: 750rpx;

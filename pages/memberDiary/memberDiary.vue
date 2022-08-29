@@ -96,7 +96,7 @@
 			},
 			check() {
 				uni.navigateTo({
-					url: `/pages/submit/submit?username=${this.username}&teamName=${this.teamName}&teamId=${this.teamId}`,
+					url: `/pages/memberCheck/memberCheck?username=${this.username}&teamName=${this.teamName}&teamId=${this.teamId}`,
 				});
 			},
 			toHistory(){

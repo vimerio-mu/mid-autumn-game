@@ -1,4 +1,9 @@
 
+.container.data-v-57280228 {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
 .backgournd.data-v-57280228 {
 	position: absolute;
 	width: 750rpx;
@@ -43,10 +48,14 @@
 	height: 134rpx;
 }
 .identityCard.data-v-57280228 {
+	position: absolute;
+	top: 244rpx;
+	left: 100rpx;
 	width: 550rpx;
 	height: 900rpx;
+	-webkit-animation: popin-data-v-57280228 0.5s ease-out;
+	        animation: popin-data-v-57280228 0.5s ease-out;
 	background-color: transparent;
-	/* animation: border 2s infinite; */
 }
 .closeBtnBg.data-v-57280228 {
 	position: absolute;
@@ -86,36 +95,48 @@
 	letter-spacing: 5rpx;
 	font-family: PingFangSC-Regular, PingFang SC;
 }
-.test.data-v-57280228 {
+.indPopup.data-v-57280228 {
 	position: absolute;
-	top: 200rpx;
-	left: 100rpx;
-	width: 550rpx;
-	height: 900rpx;
-	-webkit-animation: popin-data-v-57280228 0.5s ease-out;
-	        animation: popin-data-v-57280228 0.5s ease-out;
+	top: 100rpx;
+	left: 29rpx;
+	height: 634rpx;
+	width: 492rpx;
+	-webkit-animation: border-data-v-57280228 2s infinite;
+	        animation: border-data-v-57280228 2s infinite;
+}
+.blackBg.data-v-57280228 {
+	position: absolute;
+	background-color: rgba(0,0,0,0.53);
+	width: 750rpx;
+	height: 100%;
 }
 /* 发光 */
 @-webkit-keyframes border-data-v-57280228 {
 from {
-	-webkit-box-shadow: 0 0 50px rgb(50, 97, 224);
+	-webkit-filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
+	        filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
 }
 50% {
-	-webkit-box-shadow: 0 0 50px rgb(255, 252, 96);
+	-webkit-filter: drop-shadow(0px 0px 30px rgb(255, 252, 96));
+	        filter: drop-shadow(0px 0px 30px rgb(255, 252, 96));
 }
 to {
-	-webkit-box-shadow: 0 0 50px rgb(50, 97, 224);
+	-webkit-filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
+	        filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
 }
 }
 @keyframes border-data-v-57280228 {
 from {
-	-webkit-box-shadow: 0 0 50px rgb(50, 97, 224);
+	-webkit-filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
+	        filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
 }
 50% {
-	-webkit-box-shadow: 0 0 50px rgb(255, 252, 96);
+	-webkit-filter: drop-shadow(0px 0px 30px rgb(255, 252, 96));
+	        filter: drop-shadow(0px 0px 30px rgb(255, 252, 96));
 }
 to {
-	-webkit-box-shadow: 0 0 50px rgb(50, 97, 224);
+	-webkit-filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
+	        filter: drop-shadow(0px 0px 30px rgb(50, 97, 224));
 }
 }
 @-webkit-keyframes popin-data-v-57280228 {

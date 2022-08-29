@@ -137,4 +137,12 @@
 .able.data-v-254c49a6 {
 	color: #FFFFFF;
 }
+.info.data-v-254c49a6 {
+	position: absolute;
+	bottom: 52rpx;
+	font-size: 20rpx;
+	color: #FFFFFF;
+	width: 750rpx;
+	text-align: center;
+}
 

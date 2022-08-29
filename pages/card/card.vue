@@ -69,6 +69,7 @@
 			}
 		},
 		onLoad(options) {
+			// console.log('load at card')
 			// 获取用户信息
 			this.username = options.username;
 			uni.request({

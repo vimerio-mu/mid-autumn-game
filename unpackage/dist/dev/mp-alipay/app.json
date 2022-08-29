@@ -10,8 +10,7 @@
     "pages/share/share",
     "pages/joinTeam/joinTeam",
     "pages/memberDiary/memberDiary",
-    "pages/memberCheck/memberCheck",
-    "pages/test/test"
+    "pages/memberCheck/memberCheck"
   ],
   "subPackages": [],
   "window": {

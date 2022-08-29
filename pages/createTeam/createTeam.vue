@@ -48,6 +48,8 @@
 		<view style="padding-top: 210rpx;">
 			<RulePopup></RulePopup>
 		</view>
+		
+		<text class="info">*一旦造月成功，名称无法修改</text>
 	</view>
 </template>
 
@@ -242,5 +244,13 @@
 	}
 	.able {
 		color: #FFFFFF;
+	}
+	.info {
+		position: absolute;
+		bottom: 52rpx;
+		font-size: 20rpx;
+		color: #FFFFFF;
+		width: 750rpx;
+		text-align: center;
 	}
 </style>

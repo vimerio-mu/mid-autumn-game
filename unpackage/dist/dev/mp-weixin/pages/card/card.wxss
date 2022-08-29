@@ -1,53 +1,86 @@
 
-.indexBg {
-	overflow: hidden;
+.bgImg.data-v-99f1c1f4{
+	position: absolute;
 	width: 750rpx;
-	background-color: #eeeeee;
+	height: 100%;
 }
-.btnGroup {
+.infoBtnImg.data-v-99f1c1f4 {
+	position: absolute;
+	left: 48rpx;
+	top: 80rpx;
+	width: 128rpx;
+	height: 138rpx;
+}
+.infoBtn.data-v-99f1c1f4 {
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	left: 48rpx;
+	top: 80rpx;
+	width: 128rpx;
+	height: 138rpx;
+}
+.historyBtnBg.data-v-99f1c1f4 {
+	position: absolute;
+	left: 48rpx;
+	top: 254rpx;
+	width: 128rpx;
+	height: 147rpx;
+}
+.historyBtn.data-v-99f1c1f4{
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	left: 48rpx;
+	top: 254rpx;
+	width: 128rpx;
+	height: 147rpx;
+}
+.identityCard.data-v-99f1c1f4{
+	position: absolute;
+	top: 400rpx;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+	        transform: translate(-50%);
 	display: flex;
-	width: 500rpx;
-	height: 100rpx;
+	justify-content: center;
+	align-items: flex-end;
+}
+.identityCardImg.data-v-99f1c1f4{
 	position: absolute;
-	bottom: 100rpx;
-	right: 125rpx;
+	width: 294rpx;
+	height: 134rpx;
 }
-.rulesBtn {
-	border-radius: 25%;
-	width: 200rpx;
-	height: 100rpx;
-	background-color: dimgray;
+.identityText.data-v-99f1c1f4{
 	position: absolute;
-	top: 100rpx;
-	right: 30rpx;
+	height: 34rpx;
+	width: 294rpx;
+	bottom: 6rpx;
+	font-size: 24rpx;
+	font-family: PingFangSC-Semibold, PingFang SC;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 34rpx;
+	text-align: center;
 }
-.inditifyBtn {
-	border-radius: 25%;
-	width: 200rpx;
-	height: 100rpx;
-	background-color: dimgray;
+.btnImg.data-v-99f1c1f4{
+	width: 308rpx;
+	height: 122rpx;
 	position: absolute;
-	top: 210rpx;
-	right: 30rpx;
+	bottom: 96rpx;
 }
-.historyBtn {
-	border-radius: 25%;
-	width: 200rpx;
-	height: 100rpx;
-	background-color: dimgray;
+.createBtn.data-v-99f1c1f4{
+	left: 48rpx;
+}
+.joinBtn.data-v-99f1c1f4{
+	right: 48rpx;
+}
+.btn.data-v-99f1c1f4{
 	position: absolute;
-	top: 320rpx;
-	right: 30rpx;
-}
-.popup {
-	border: 1px solid red;
-	background-color: #eeeeee;
-	height: 200rpx;
-	width: 500rpx;
-}
-.demo {
-	height: 200rpx;
-	background-color: grey;
-	border-bottom: 5px solid red;
+	width: 308rpx;
+	height: 122rpx;
+	bottom: 96rpx;
+	border: none;
+	background-color: transparent;
 }
 

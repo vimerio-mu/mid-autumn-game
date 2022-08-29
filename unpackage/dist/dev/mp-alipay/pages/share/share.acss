@@ -1,30 +1,45 @@
 
-.mainContainer {
-	margin: 25rpx;
-	width: 700rpx;
-	background-color: #eee;
+.bottomBg {
+	position: fixed;
+	bottom: 0;
+	width: 750rpx;
+	height: 146rpx;
 }
-.textContainer {
-	background-color: #eee;
-	margin: 25rpx;
-	width: 700rpx;
-	display: flex;    /*设置显示样式**/
-	align-items: center;    /**子view垂直居中*/
-	vertical-align: center; /**垂直居中*/
-	justify-content: center; /**内容居中*/
-	flex-direction:row;
-}
-.subContainer {
-	margin: 25rpx;
-	width: 650rpx;
-	background-color: mediumaquamarine;
-}
-.btnGroup {
-	display: flex;
-	width: 500rpx;
+.backBg {
+	position: fixed;
+	width: 300rpx;
 	height: 100rpx;
-	position: absolute;
-	bottom: 100rpx;
-	right: 125rpx;
+	right: 64rpx;
+	bottom: 30rpx;
+}
+.back {
+	background-color: transparent;
+	border: none;
+	position: fixed;
+	width: 300rpx;
+	height: 100rpx;
+	right: 64rpx;
+	bottom: 30rpx;
+}
+.makeBg {
+	position: fixed;
+	width: 300rpx;
+	height: 100rpx;
+	left: 62rpx;
+	bottom: 30rpx;
+}
+.make {
+	background-color: transparent;
+	border: none;
+	position: fixed;
+	width: 300rpx;
+	height: 100rpx;
+	left: 62rpx;
+	bottom: 30rpx;
+}
+.canvas {
+	/* position: fixed; */
+	/* height: 2100rpx; */
+	width: 750rpx;
 }
 

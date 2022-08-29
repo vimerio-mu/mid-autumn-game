@@ -3,6 +3,9 @@
 /* 水平间距 */
 @font-face {
   font-family: "YouSheBiaoTiHei";
-  src: url("/static/优设标题黑.ttf");
+  src: url("/static/YouSheBiaoTiHei.ttf");
+}
+button::after {
+  border: none;
 }
 
