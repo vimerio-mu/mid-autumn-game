@@ -60,104 +60,110 @@
 					console.log(res.data);
 				}
 			});
-			// 绘制canvas
+			// 
 			var context = uni.createCanvasContext('Canvas')
 			const rpx = this.rpx
 			let memberBodyHeight = (48 * vm.teamMembers.length) * rpx
 			let diaryBodyHeight = Math.ceil(vm.diary.length / 17) * 40 * rpx
 			// 动态设置canvas高度
 			vm.height =` ${Math.ceil(1000 * rpx + memberBodyHeight + diaryBodyHeight)}px `
-			// 背景
-			await context.drawImage(
-					'../../static/bg3.png',
-					0 * rpx,
-					0 * rpx,
-					750 * rpx, 1000 * rpx + memberBodyHeight + diaryBodyHeight
-				)
-			// logo图片
-			await context.drawImage(
-					'../../static/logo/03.png',
-					15 * rpx,
-					38 * rpx,
-					720 * rpx, 300 * rpx
-				)
-			// 队名
-			// 设置文案大小和字体
-			// 设置渐变
-			const grd = context.createLinearGradient(0,0,170,170)
-			grd.addColorStop(0, '#FFFFFF')
-			grd.addColorStop(1, '#DCEBFF')
-			context.setFillStyle(grd)
-			context.font = `${Math.floor(56 * rpx)}px YouSheBiaoTiHei`
-			// 设置队名居中
-			context.setTextAlign('center')
-			context.fillText(vm.teamName, 375 * rpx, 290 * rpx);
-			// 绘制队员框背景上部分
-			await context.drawImage(
-			 		'../../static/memberTop.png',
-			 		48 * rpx,
-			 		362 * rpx,
-			 		654 * rpx, 142 * rpx
-			 	)
-			// 设置字体
-			context.setFillStyle('#FFFFFF')
-			context.font = `${Math.floor(32 * rpx)}px PingFangSC-Medium, PingFang SC`
-			context.setTextBaseline('top')
-			// 计算MemberBody需要的高度（即teamMembers的个数）
-			await context.drawImage(
-			 		'../../static/memberBody.png',
-			 		48 * rpx,
-			 		504 * rpx,
-			 		654 * rpx, memberBodyHeight
-			 	)
-			// for循环绘制队员名
-			context.setTextAlign('left')
-			let i = 0;
-			for(i; i < vm.teamMembers.length; i++) {
-				context.fillText(this.teamMembers[i], 176 * rpx, (504 + 48 * i) * rpx);
-			}
-			// 绘制队员框背景下部分
-			await context.drawImage(
-			 		'../../static/diaryTop.png',
-			 		48 * rpx,
-			 		504 * rpx + memberBodyHeight,
-			 		654 * rpx, 296 * rpx
-			 	)
-			// 计算MemberBody需要的高度（即teamMembers的个数）
-			await context.drawImage(
-					'../../static/diaryBody.png',
-					48 * rpx,
-					800 * rpx + memberBodyHeight,
-					654 * rpx, diaryBodyHeight
-				)
-			// 设置字体	
-			context.font = `${Math.floor(28 * rpx)}px PingFangSC-Semibold, PingFang SC` 
-			// 字符分隔为数组
-			var arrText = vm.diary.split('');
-			var line = '';
-			let x = 134 * rpx, y = 800 * rpx + memberBodyHeight
-			for (var n = 0; n < arrText.length; n++) {
-				var testLine = line + arrText[n];
-				if (testLine.length > 18 && n > 0) {
-					context.fillText(line, x, y);
-					            line = arrText[n];
-					            y += 40 * rpx;
-				} else {
-					line = testLine;
-				}
-			}
-			context.fillText(line, 134 * rpx, y);
-			// 绘制日记框背景下部分
-			await context.drawImage(
-					'../../static/diaryBottom.png',
-					48 * rpx,
-					800 * rpx + memberBodyHeight + diaryBodyHeight,
-					654 * rpx, 148 * rpx
-				)
-			// 绘制canvas
-			await context.draw()
+			this.draw(context,memberBodyHeight,diaryBodyHeight);
 		},
 		methods: {
+			async draw(context,memberBodyHeight,diaryBodyHeight) {
+				// 绘制canvas
+				var vm = this;
+				const rpx = this.rpx
+				// 背景
+				await context.drawImage(
+						'../../static/bg3.png',
+						0 * rpx,
+						0 * rpx,
+						750 * rpx, 1000 * rpx + memberBodyHeight + diaryBodyHeight
+					)
+				// logo图片
+				await context.drawImage(
+						'../../static/logo/03.png',
+						15 * rpx,
+						38 * rpx,
+						720 * rpx, 300 * rpx
+					)
+				// 队名
+				// 设置文案大小和字体
+				// 设置渐变
+				const grd = context.createLinearGradient(0,0,170,170)
+				grd.addColorStop(0, '#FFFFFF')
+				grd.addColorStop(1, '#DCEBFF')
+				context.setFillStyle(grd)
+				context.font = `${Math.floor(56 * rpx)}px YouSheBiaoTiHei`
+				// 设置队名居中
+				context.setTextAlign('center')
+				context.fillText(vm.teamName, 375 * rpx, 290 * rpx);
+				// 绘制队员框背景上部分
+				await context.drawImage(
+				 		'../../static/memberTop.png',
+				 		48 * rpx,
+				 		362 * rpx,
+				 		654 * rpx, 142 * rpx
+				 	)
+				// 设置字体
+				context.setFillStyle('#FFFFFF')
+				context.font = `${Math.floor(32 * rpx)}px PingFangSC-Medium, PingFang SC`
+				context.setTextBaseline('top')
+				// 计算MemberBody需要的高度（即teamMembers的个数）
+				await context.drawImage(
+				 		'../../static/memberBody.png',
+				 		48 * rpx,
+				 		504 * rpx,
+				 		654 * rpx, memberBodyHeight
+				 	)
+				// for循环绘制队员名
+				context.setTextAlign('left')
+				let i = 0;
+				for(i; i < vm.teamMembers.length; i++) {
+					context.fillText(this.teamMembers[i], 176 * rpx, (504 + 48 * i) * rpx);
+				}
+				// 绘制队员框背景下部分
+				await context.drawImage(
+				 		'../../static/diaryTop.png',
+				 		48 * rpx,
+				 		504 * rpx + memberBodyHeight,
+				 		654 * rpx, 296 * rpx
+				 	)
+				// 计算MemberBody需要的高度（即teamMembers的个数）
+				await context.drawImage(
+						'../../static/diaryBody.png',
+						48 * rpx,
+						800 * rpx + memberBodyHeight,
+						654 * rpx, diaryBodyHeight
+					)
+				// 设置字体	
+				context.font = `${Math.floor(28 * rpx)}px PingFangSC-Semibold, PingFang SC` 
+				// 字符分隔为数组
+				var arrText = vm.diary.split('');
+				var line = '';
+				let x = 134 * rpx, y = 800 * rpx + memberBodyHeight
+				for (var n = 0; n < arrText.length; n++) {
+					var testLine = line + arrText[n];
+					if (testLine.length > 18 && n > 0) {
+						context.fillText(line, x, y);
+						            line = arrText[n];
+						            y += 40 * rpx;
+					} else {
+						line = testLine;
+					}
+				}
+				context.fillText(line, 134 * rpx, y);
+				// 绘制日记框背景下部分
+				await context.drawImage(
+						'../../static/diaryBottom.png',
+						48 * rpx,
+						800 * rpx + memberBodyHeight + diaryBodyHeight,
+						654 * rpx, 148 * rpx
+					)
+				// 绘制canvas
+				await context.draw()
+			},
 			capture() {
 				const vm = this
 				// #ifdef MP-ALIPAY
@@ -237,8 +243,8 @@
 		bottom: 30rpx;
 	}
 	.canvas {
-		/* position: fixed; */
-		/* height: 2100rpx; */
+		position: fixed;
+		height: 2100rpx;
 		width: 750rpx;
 	}
 </style>

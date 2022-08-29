@@ -139,6 +139,8 @@
 		height: 72rpx;
 		top: 226rpx;
 		left: 50%;
+		width: 750rpx;
+		text-align: center;
 		transform: translate(-50%);
 		font-size: 56rpx;
 		font-family: YouSheBiaoTiHei;
